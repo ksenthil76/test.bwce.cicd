@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Greetings" xmlns:tns="http://www.example.org/Greetings" elementFormDefault="qualified">
+
+    <element name="name" type="tns:nametype"></element>
+
+    <element name="greeting" type="tns:greetingtype"></element>
+
+    <simpleType name="nametype">
+    	<restriction base="string"></restriction>
+    </simpleType>
+
+    <simpleType name="greetingtype">
+    	<restriction base="string"></restriction>
+    </simpleType>
+</schema>

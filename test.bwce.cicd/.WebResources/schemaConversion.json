@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/test.bwce.cicd/Service Descriptors/test.bwce.cicd.HelloWorld-greeting.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://www.example.org/Greetings"
+}]}

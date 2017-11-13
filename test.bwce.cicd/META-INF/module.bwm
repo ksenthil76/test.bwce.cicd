@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_tlhkcMgpEee2ebIiaEW0aw" targetNamespace="http://tns.tibco.com/bw/composite/test.bwce.cicd" name="test.bwce.cicd" compositeext:version="1.0.0" compositeext:formatVersion="2">
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_tlhkcMgpEee2ebIiaEW0aw" targetNamespace="http://tns.tibco.com/bw/composite/test.bwce.cicd" name="test.bwce.cicd" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_mJ8fgMgwEee2ebIiaEW0aw" name="greeting" promote="ComponentProcess/greeting">
+    <sca:interface.wsdl xmi:id="_mKFCYMgwEee2ebIiaEW0aw" interface="http://xmlns.example.com/20171113094835PLT#wsdl.interface(greeting)"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_mKOzYMgwEee2ebIiaEW0aw" name="RestService" path="/greeting" docBasePath="http://localhost:7777/test.bwce.cicd" docResourcePath="greeting" basePath="/" connector="test.bwce.cicd.greeting" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/test.bwce.cicd.HelloWorld-greeting.json">
+      <operation xmi:id="_mKQBgMgwEee2ebIiaEW0aw" operationName="post" nickname="post-greeting" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_mK4ToMgwEee2ebIiaEW0aw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_mKQBgcgwEee2ebIiaEW0aw" bindingName="RestService"/>
+  </sca:service>
   <sca:property xmi:id="_uEibsMgpEee2ebIiaEW0aw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_uEv3EMgpEee2ebIiaEW0aw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_uE19sMgpEee2ebIiaEW0aw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
@@ -7,7 +18,11 @@
   <sca:property xmi:id="_uFAVwMgpEee2ebIiaEW0aw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_uFF1UMgpEee2ebIiaEW0aw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="_uFLU4MgpEee2ebIiaEW0aw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_nbrNIMgwEee2ebIiaEW0aw" name="greeting" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_t1odAMgpEee2ebIiaEW0aw" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_t1odAcgpEee2ebIiaEW0aw" processName="test.bwce.cicd.Process"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_t1odAcgpEee2ebIiaEW0aw" processName="test.bwce.cicd.HelloWorld"/>
+    <sca:service xmi:id="_mJ1x0MgwEee2ebIiaEW0aw" name="greeting">
+      <sca:interface.wsdl xmi:id="_mJ2_8MgwEee2ebIiaEW0aw" interface="http://xmlns.example.com/20171113094835PLT#wsdl.interface(greeting)"/>
+    </sca:service>
   </sca:component>
 </sca:composite>

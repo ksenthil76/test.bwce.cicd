@@ -1,11 +1,12 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Test Bwce Cicd Application
+Manifest-Version: 1.0.0.qualifier
+TIBCO-BW-Application: META-INF/TIBCO.xml
 Bundle-SymbolicName: test.bwce.cicd.application
+Bundle-Name: Test Bwce Cicd Application
 Bundle-Version: 1.0.0.qualifier
+Bundle-ManifestVersion: 2
+TIBCO-BW-Edition: bwcf
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BWCE-Edition-Target: cf
-TIBCO-BW-Edition: bwcf
 TIBCO-BW-ConfigProfile: META-INF/docker.substvar
-TIBCO-BW-Application: META-INF/TIBCO.xml
 TIBCO-BW-Version: 2.3.1 V22 2017-08-17
+
